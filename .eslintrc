@@ -17,6 +17,7 @@
     "react-hooks/exhaustive-deps": "warn",
     "arrow-body-style": "off",
 
-    "prefer-arrow-callback": "off"
+    "prefer-arrow-callback": "off",
+    "react/function-component-definition": "off"
   }
 }
