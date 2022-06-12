@@ -9,7 +9,7 @@ const Home = () => {
 
   const isShowsSearch = searchOption === 'shows';
   const onSearch = () => {
-    apiGet(`/search/${searchOption}?q=${input}s`).then(result => {
+    apiGet(`/search/${searchOption}?q=${input}`).then(result => {
       setResults(result);
     });
   };
