@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useEffect, useReducer } from 'react';
 
 function showsReducer(prevState, action) {
@@ -19,6 +20,7 @@ function userPersistedReducer(reducer, initalState, key) {
     const persisted = localStorage.getItem(key);
     return persisted ? JSON.parse(persisted) : initial;
   });
+
   useEffect(() => {
     localStorage.getItem(key, JSON.stringify(state));
   }, [state, key]);
