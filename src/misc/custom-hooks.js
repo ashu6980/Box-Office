@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+import { buildTimeValue } from '@testing-library/user-event/dist/utils';
 import { useEffect, useReducer } from 'react';
 
 function showsReducer(prevState, action) {
@@ -22,7 +23,7 @@ function userPersistedReducer(reducer, initalState, key) {
   });
 
   useEffect(() => {
-    localStorage.getItem(key, JSON.stringify(state));
+    localStorage.setItem(key, JSON.stringify(state));
   }, [state, key]);
   return [state, dispatch];
 }
